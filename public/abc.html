@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fn() {
+        console.log("我是函数~");
+      }
+
+      class Animal {
+        #name;
+        #age;
+        constructor(name, age) {
+          this.#name = name;
+          this.#age = age;
+        }
+
+        sayHello() {
+          console.log("动物在叫~");
+        }
+      }
+
+      class Cat extends Animal {}
+
+      const cat = new Cat("Kitty", 3);
+      const a = new Animal("Kitty", 3);
+
+      // console.log(fn.__proto__.__proto__.__proto__);
+      // console.log(Object.__proto__.__proto__.__proto__);
+      console.log(cat.__proto__);
+      console.log(Cat.prototype);
+      console.log(a);
+    </script>
+  </body>
+</html>
